@@ -279,7 +279,6 @@ python inference.py --output_file=/path/to/predictions.csv --input_data_pattern=
 *   `mnist_models.py`: Contains the definition for models that that take the aggregated features as input, and you should add your own models here. You can invoke any model by calling train.py using --model=YourModelName.
 *   `mnist_models.py`: 인풋에서 관찰해야 하는 특성들을 입력으로 받을 수 있는 모델에 대한 정의가 있습니다. 여러분은 여러분만의 모델 또한 이 곳에 정의하셔야 합니다. train.py를 호출할 떄 인자로 --model=YourModelName 을 전달하여 여러분의 모델을 부를 수 있습니다.
 *   `export_model.py`: 배치 예측 작업에서 쓰일 모델을 추출하기 위한 클래스를 제공합니다.
-*   `readers.py`: Contains the definition of the dataset, and describes how input data are prepared. You can preprocess the input files by modifying prepare_serialized_examples(). For example, you may want to resize the data or introduce some random noise.
 *   `readers.py`: 데이터에 대한 정의와 인풋 데이터가 어떤 식으로 준비되어야 하는지를 표기하고 있습니다. prepare_serialized_examples()를 변경함으로써 인풋 파일을 프리프로세스 할 수도 있습니다. 예를 들면 데이터를 리사이즈하거나 랜덤 노이즈를 섞을 수 있습니다.
 
 ### Evaluation

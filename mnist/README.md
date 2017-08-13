@@ -1,6 +1,6 @@
 # MNIST Tensorflow Starter Code
 
-For the English version description, please follow the link: [Link](https://github.com/machine-learning-challenge/kmlc/blob/master/mnist/README.en.md)
+For the English version description, please follow the link: [Link](README.en.md)
 
 본 저장소는 MNIST 문제를 해결하기 위한 트레이닝과 머신러닝 모델 평가를 위한 기본적인 코드를 담고 있습니다.
 

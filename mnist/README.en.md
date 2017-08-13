@@ -1,6 +1,6 @@
 # MNIST Tensorflow Starter Code
 
-한국어 버전 설명은 다음 링크를 따라가주세요: [Link](https://github.com/machine-learning-challenge/kmlc/blob/master/mnist/README.md)
+한국어 버전 설명은 다음 링크를 따라가주세요: [Link](README.md)
 
 This repo contains starter code for training and evaluating machine learning
 models over the mnist dataset.

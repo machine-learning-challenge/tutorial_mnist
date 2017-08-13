@@ -272,7 +272,7 @@ mkdir -p /tmp/batch_predict/${JOB_NAME}
 gsutil -m cp -r ${BUCKET_NAME}/batch_predict/${JOB_NAME}.csv/* /tmp/batch_predict/${JOB_NAME}.csv
 ```
 
-Submit the resulting file /tmp/batch_predict/${JOB_NAME}.csv to Kaggle.
+Submit the resulting file /tmp/batch_predict/${JOB_NAME}.csv to [Kaggle](https://inclass.kaggle.com/c/mnist-tutorial-machine-learning-challenge).
 
 ### Accessing Files on Google Cloud
 
@@ -376,7 +376,7 @@ This sample code contains implementation of the logistic model:
 * Adjust the parameters in train.py, such as the batch size and learning rate, and modify the training procedure if it is necessary.
 * Train your model by calling train.py using your model name and loss function.
 * Call eval.py to examine the performance of trained model on validation data.
-* Call inference.py to obtain the predicted labels using your model, and submit these labels in Kaggle for evaluation.
+* Call inference.py to obtain the predicted labels using your model, and submit these labels in [Kaggle](https://inclass.kaggle.com/c/mnist-tutorial-machine-learning-challenge) for evaluation.
 * In general, you are free to modify any file if it improves the performance of your model.
 
 ## Etc

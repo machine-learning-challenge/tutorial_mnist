@@ -210,7 +210,7 @@ mkdir -p /tmp/batch_predict/${JOB_NAME}
 gsutil -m cp -r ${BUCKET_NAME}/batch_predict/${JOB_NAME}.csv /tmp/batch_predict/${JOB_NAME}.csv
 ```
 
-/tmp/batch_predict/${JOB_NAME}.csv 를 Kaggle에 제출해주세요.
+/tmp/batch_predict/${JOB_NAME}.csv 를 [Kaggle](https://inclass.kaggle.com/c/mnist-tutorial-machine-learning-challenge)에 제출해주세요.
 
 
 ### Accessing Files on Google Cloud
@@ -305,7 +305,7 @@ python inference.py --output_file=/path/to/predictions.csv --input_data_pattern=
 * 여러분의 모델 이름과 로스 함수를 이용해서 train.py를 호출하여 모델을 훈련하세요.
 * Call eval.py to examine the performance of trained model on validation data.
 * eval.py를 호출하여 검증 데이터 위에서 훈련된 모델의 성능을 검증하세요.
-* inference.py를 통하여 훈련된 모델을 테스트 데이터에 적용하고, 결과 예측 레이블 정보를 채점을 위해 Kaggle에 제출하세요.
+* inference.py를 통하여 훈련된 모델을 테스트 데이터에 적용하고, 결과 예측 레이블 정보를 채점을 위해 [Kaggle](https://inclass.kaggle.com/c/mnist-tutorial-machine-learning-challenge)에 제출하세요.
 * 본 시나리오는 MLC에 참가하기 위한 가장 쉬운 시나리오 중 하나이며, 여러분만의 솔루션과 더 나은 성능을 위해서라면 어떤 파일을 수정하셔도 무방합니다.
 
 ## Etc

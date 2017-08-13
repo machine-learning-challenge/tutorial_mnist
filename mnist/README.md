@@ -313,5 +313,5 @@ python inference.py --output_file=/path/to/predictions.csv --input_data_pattern=
 
 ## About This Project
 This project is meant help people quickly get started working with the
-[mnist](LINK_TO_KMLC_SITE) dataset.
+[mnist](https://inclass.kaggle.com/c/mnist-tutorial-machine-learning-challenge) dataset.
 This is not an official Google product.

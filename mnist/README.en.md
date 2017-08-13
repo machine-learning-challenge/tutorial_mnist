@@ -384,5 +384,5 @@ This sample code contains implementation of the logistic model:
 
 ## About This Project
 This project is meant help people quickly get started working with the
-[mnist](LINK_TO_KMLC_SITE) dataset.
+[mnist](https://inclass.kaggle.com/c/mnist-tutorial-machine-learning-challenge) dataset.
 This is not an official Google product.

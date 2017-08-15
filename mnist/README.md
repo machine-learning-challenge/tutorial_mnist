@@ -82,8 +82,6 @@ gsutil cp gs://kmlc_test_train_bucket/mnist/train.tfrecords .
 
 다음 명령어는 해당 모델을 Google Cloud 위에서 훈련시킬 것입니다. 다음 명령어들은 Google Cloud Shell위에서 실행되어야 합니다.
 
-The following commands will train a model on Google Cloud. Following commands are need to be executed on Google Cloud Shell.
-
 ```sh
 BUCKET_NAME=gs://${USER}_kmlc_mnist_train_bucket
 # (One Time) Create a storage bucket to store training logs and checkpoints.
@@ -266,9 +264,7 @@ python inference.py --output_file=/path/to/predictions.csv --input_data_pattern=
 
 예제 코드는 Logistic model의 구현체를 담고 있습니다:
 
-*   `LogisticModel`: Linear projection of the output features into the label
-                     space, followed by a sigmoid function to convert logit
-                     values to probabilities.
+*   `[LogisticModel](https://ko.wikipedia.org/wiki/%EB%A1%9C%EC%A7%80%EC%8A%A4%ED%8B%B1_%ED%9A%8C%EA%B7%80)`: 독립 변수의 선형 결합을 이용하여 사건의 발생 가능성을 예측하는데 사용되는 통계 기법입니다.
 
 ## Overview of Files
 
@@ -276,7 +272,6 @@ python inference.py --output_file=/path/to/predictions.csv --input_data_pattern=
 *   `train.py`: 훈련을 위한 전달인자와 과정을 정의합니다. 변경 가능한 전달인자로는 훈련 데이터셋의 위치, 훈련에 사용될 모델, 배치 사이즈, 로스 함수, 학습 레이트 등이 있습니다. 모델에 따라 get_input_data_tensors()를 변경하여 데이터가 셔플되는 과정을 수정하실 수도 있습니다.
 *   `losses.py`: 로스 함수를 정의합니다. losses.py에 정의된 어떤 로스 함수도 train.py에서 사용하실 수 있습니다.
 *   `models.py`: 모델을 정의하기 위한 Base class를 포함하고 있습니다.
-*   `mnist_models.py`: Contains the definition for models that that take the aggregated features as input, and you should add your own models here. You can invoke any model by calling train.py using --model=YourModelName.
 *   `mnist_models.py`: 인풋에서 관찰해야 하는 특성들을 입력으로 받을 수 있는 모델에 대한 정의가 있습니다. 여러분은 여러분만의 모델 또한 이 곳에 정의하셔야 합니다. train.py를 호출할 떄 인자로 --model=YourModelName 을 전달하여 여러분의 모델을 부를 수 있습니다.
 *   `export_model.py`: 배치 예측 작업에서 쓰일 모델을 추출하기 위한 클래스를 제공합니다.
 *   `readers.py`: 데이터에 대한 정의와 인풋 데이터가 어떤 식으로 준비되어야 하는지를 표기하고 있습니다. prepare_serialized_examples()를 변경함으로써 인풋 파일을 프리프로세스 할 수도 있습니다. 예를 들면 데이터를 리사이즈하거나 랜덤 노이즈를 섞을 수 있습니다.
@@ -288,7 +283,6 @@ python inference.py --output_file=/path/to/predictions.csv --input_data_pattern=
 *   `mean_average_precision_calculator.py`: Mean average precision을 계산하는 함수들을 제공합니다.
 
 ### Inference
-*   `inference.py`: Generates an output file containing predictions of the model over a set of data. Call inference.py on the test data to generate a list of predicted labels. For the supervised learning problems, the evaluation is based on the accuracy of the predicted labels.
 *   `inference.py`: inference.py를 호출하여 테스트 데이터에 대한 예측 레이블들을 생성하세요. Supervised learning 문제에서 채점은 Predicted label의 정확도에 기반하여 진행됩니다.
 
 ### Misc
@@ -302,7 +296,6 @@ python inference.py --output_file=/path/to/predictions.csv --input_data_pattern=
 * 필요하다면, readers.py 안에 입력 프리프로세싱을 추가해주세요
 * train.py 파일 안에서 batch size나 learning rate와 같은 parameter들을 조절하고, 필요하다면 training procedure도 수정해주세요.
 * 여러분의 모델 이름과 로스 함수를 이용해서 train.py를 호출하여 모델을 훈련하세요.
-* Call eval.py to examine the performance of trained model on validation data.
 * eval.py를 호출하여 검증 데이터 위에서 훈련된 모델의 성능을 검증하세요.
 * inference.py를 통하여 훈련된 모델을 테스트 데이터에 적용하고, 결과 예측 레이블 정보를 채점을 위해 [Kaggle](https://inclass.kaggle.com/c/mnist-tutorial-machine-learning-challenge)에 제출하세요.
 * 본 시나리오는 MLC에 참가하기 위한 가장 쉬운 시나리오 중 하나이며, 여러분만의 솔루션과 더 나은 성능을 위해서라면 어떤 파일을 수정하셔도 무방합니다.
